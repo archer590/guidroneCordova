@@ -1,0 +1,33 @@
+{"main_facilities":[
+	{
+		"id": "info-point",
+		"name": "Info point",
+		"floor": 1
+	},
+	{
+		"id": "aula-magna",
+		"name": "Aula Magna",
+		"floor": 0
+	},
+	{
+		"id": "secretary",
+		"name": "Secretary",
+		"floor": 1
+	},
+	{
+		"id": "library",
+		"name": "Library",
+		"floor": 1
+	},
+	{
+		"id": "elevator-e",
+		"name": "Elevator SER-E, Ground floor",
+		"floor": 0
+	},
+	{
+		"id": "relax-area-e",
+		"name": "Relax Area SER-E",
+		"floor": 0
+	}
+]
+}

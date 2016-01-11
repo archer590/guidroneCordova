@@ -1,0 +1,114 @@
+@font-face {
+    font-family: myriad;
+    src: url(./../fonts/MYRIADPROREGULAR.woff);
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(./img/start.png) no-repeat;
+  background-size: cover;
+}
+
+body {
+	font-family: myriad;
+}
+
+table {
+	background: transparent;
+}
+
+.center-table {
+	margin: 0px auto 0px auto;
+}
+
+tr {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	
+}
+
+th {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;	
+	
+}
+
+.title {
+	/*font-family: myriad;*/
+	font-size: 60px;
+	margin: 20px 20px 40px 20px;
+	text-align: center;
+	font-weight: bold;
+	color: #007BE4;
+}
+
+.panel-title {
+	/*font-family: myriad;*/
+	text-align: center;
+	font-size: 25px;
+}
+
+.panel-body {
+	/*font-family: myriad;*/
+	margin: 0px auto 0px auto;
+	text-align: center;
+	background: transparent;
+}
+
+#start_button, #pause_button, #stop_button {
+	/*font-family: myriad;*/
+	font-size: 35px;
+	font-variant: small-caps;
+	/*margin: 0px auto 0px auto;*/
+	text-align: center;
+	width: 140px;
+	height: 70px;    
+}
+
+button {
+	margin: 0px 15px 0px 15px;
+}
+
+#control_panel, #status_panel {
+	margin: 80px auto 0px auto;
+	text-align: center;
+}
+
+.tr_status {
+	border-top: 1px solid;
+}
+
+.th_status + .th_status, .td_status + .td_status { 
+	border-left: 1px solid;
+}
+
+#table_status { 
+	margin: 80px auto 0px auto;
+	border-collapse: collapse;
+	font-size: 25px;
+}
+
+#image_panel {
+	margin: 40px auto 0px auto;
+	text-align: center;
+}
+
+#destination_image {
+	width: 20%;
+	height: 20%;
+	border-radius: 25px;
+    border: 2px solid #007BE4;
+}

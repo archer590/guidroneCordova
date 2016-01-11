@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Guidrone</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="./bootstrap/css/extra_css.css" rel="stylesheet">
+  <script type="text/javascript" src="./bootstrap/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="home.js"></script>
+  <script type="text/javascript" src="require.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    var rooms = readJSON('./json/main_facilities.json');
+                console.log("JSON file read.");
+                addButton(rooms); 
+                console.log("Creation of button completed.");  
+  </script>
+</head>
+
+<body role="document">
+<div class="video_background">
+
+  <div style="height:100vh; width:100vw">
+    <p class="title">
+      GuiDrone
+    </p>
+    <table class="center-table">
+      <tr>
+        <th colspan="2">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Main Facilities</h3>
+            </div>
+
+
+            <div id='main_facilities' class="panel-body">
+
+            </div>
+          </div>
+       </th>
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+</body>
+
+</html>

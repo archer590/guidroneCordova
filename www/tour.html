@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Tour Control Panel</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="./bootstrap/css/extra_css.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body role="document">
+  <p id="trip_title" class="title">
+    Trip to ...
+  </p>
+
+  <div id="image_panel">
+    <img id="destination_image">
+  </div>
+
+
+  <div id="control_panel">
+
+    <button id="start_button" type="button" class="btn btn-lg btn-success">Start</button>
+
+    <button id="pause_button" type="button" class="btn btn-lg btn-warning">Pause</button>
+
+    <button id="stop_button" type="button" class="btn btn-lg btn-danger">Release</button>
+
+  </div>
+
+  <div id="status_panel">
+    <table id="table_status">
+      <tr class="tr_status">
+        <th class="th_status">
+          Drone in use
+        </th>
+        <td class="td_status">
+          Parrot Bepop Drone VT2386
+        </td>
+      </tr>
+      <tr class="tr_status">
+        <th class="th_status">
+          Speed
+        </th>
+         <td class="td_status">
+          12 m/s
+        </td>
+      </tr>
+      <tr class="tr_status">
+        <th class="th_status">
+          Distance to the destination
+        </th>
+         <td class="td_status">
+          35 m
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  </div>
+
+
+  <script>
+    var x = location.href;
+    console.log(x);
+if (x.indexOf("info-point") > -1){
+  console.log("info-point");
+  document.getElementById("trip_title").innerHTML = "Trip to Info Point";
+  document.getElementById("destination_image").src = "img/logo_unibz.jpg";
+} else if (x.indexOf("secretary") > -1) {
+  console.log("secretary");
+  document.getElementById("trip_title").innerHTML = "Trip to Secretary";
+  document.getElementById("destination_image").src = "img/Student_Secretariat.jpg";
+} else if (x.indexOf("aula-magna") > -1) {
+  console.log("aula-magna");
+  document.getElementById("trip_title").innerHTML = "Trip to Aula Magna";
+  document.getElementById("destination_image").src = "img/aula_magna.jpg";
+} else if (x.indexOf("library") > -1) {
+  console.log("library");
+  document.getElementById("trip_title").innerHTML = "Trip to Library";
+  document.getElementById("destination_image").src = "img/library.jpg";
+} else if (x.indexOf("elevator-e") > -1) {
+  console.log("elevator-e");
+  document.getElementById("trip_title").innerHTML = "Trip to elevator E building<br>(ground floor)";
+  document.getElementById("destination_image").src = "img/e.jpg";
+} else if (x.indexOf("relax-area-e") > -1) {
+  console.log("relax-area-e");
+  document.getElementById("trip_title").innerHTML = "Trip to relax area E building";
+  document.getElementById("destination_image").src = "img/e.jpg";
+}   
+    console.log();
+    $( "#pause_button" ).click(function() {
+      //console.log("button clicked");
+    var value = document.getElementById("pause_button").innerHTML;
+      if(value == "Pause")
+        document.getElementById("pause_button").innerHTML = "Resume";
+      else if (value == "Resume")
+        document.getElementById("pause_button").innerHTML = "Pause";
+    });
+  </script>
+
+</body>
+
+</html>
