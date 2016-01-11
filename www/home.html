@@ -15,13 +15,7 @@
   <script type="text/javascript" src="./bootstrap/js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="home.js"></script>
   <script type="text/javascript" src="require.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-  <script>
-    var rooms = readJSON('./json/main_facilities.json');
-                console.log("JSON file read.");
-                addButton(rooms); 
-                console.log("Creation of button completed.");  
-  </script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body role="document">
@@ -52,5 +46,11 @@
 </div>
 
 </body>
+<script>
+    var rooms = readJSON('./json/main_facilities.json');
+                console.log("JSON file read.");
+                addButton(rooms); 
+                console.log("Creation of button completed.");  
+  </script>
 
 </html>

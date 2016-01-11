@@ -1,43 +1,43 @@
-var express = require('express');
+var requirejs = require (['requirejs'], function(requirejs){});
+var express = require (['express'], function(express){});
 var app = express();
-var path = require("path");
-var jquery = require('jquery');
-var requirejs = require('requirejs');
+var path = require (['path'], function(path){});
+var jquery = require (['jquery'], function(jquery){});
 
-app.use("/bootstrap", express.static(__dirname+ '/bootstrap'));
-app.use("/img", express.static(__dirname+ '/img'));
-app.use("/json", express.static(__dirname+ '/json'));
+app.use("/bootstrap", express.static(path.resolve(path.dirname()) + '/bootstrap'));
+app.use("/img", express.static(path.resolve(path.dirname())+ '/img'));
+app.use("/json", express.static(path.resolve(path.dirname())+ '/json'));
 
-app.use("/home.js", express.static(__dirname+ '/scripts/home.js'));
-app.use("/require.js", express.static(__dirname + '/scripts/require.js'));
-app.use("/jquery-1.11.3.min.js", express.static(__dirname+ '/bootstrap/js/jquery-1.11.3.min.js'));
+app.use("/home.js", express.static(path.resolve(path.dirname())+ '/scripts/home.js'));
+app.use("/require.js", express.static(path.resolve(path.dirname()) + '/scripts/require.js'));
+app.use("/jquery-1.11.3.min.js", express.static(path.resolve(path.dirname())+ '/bootstrap/js/jquery-1.11.3.min.js'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/home.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/home.html'));
 });
 
 app.get('/info-point', function (req, res) {
-	res.sendFile(path.join(__dirname + '/tour.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/tour.html'));
 });
 
 app.get('/secretary', function (req, res) {
-	res.sendFile(path.join(__dirname + '/tour.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/tour.html'));
 });
 
 app.get('/aula-magna', function (req, res) {
-	res.sendFile(path.join(__dirname + '/tour.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/tour.html'));
 });
 
 app.get('/library', function (req, res) {
-	res.sendFile(path.join(__dirname + '/tour.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/tour.html'));
 });
 
 app.get('/elevator-e', function (req, res) {
-	res.sendFile(path.join(__dirname + '/tour.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/tour.html'));
 });
 
 app.get('/relax-area-e', function (req, res) {
-	res.sendFile(path.join(__dirname + '/tour.html'));
+  res.sendFile(path.join(path.resolve(path.dirname()) + '/tour.html'));
 });
 
 var server = app.listen(3000, function () {

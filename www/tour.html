@@ -69,34 +69,34 @@
 
 
   <script>
-    var x = location.href;
-    console.log(x);
-if (x.indexOf("info-point") > -1){
-  console.log("info-point");
+    var room = localStorage.getItem("room");
+    console.log(room);
+if (room == "infopoint"){
+  console.log("infopoint");
   document.getElementById("trip_title").innerHTML = "Trip to Info Point";
   document.getElementById("destination_image").src = "img/logo_unibz.jpg";
-} else if (x.indexOf("secretary") > -1) {
+} else if (room == "secretary") {
   console.log("secretary");
   document.getElementById("trip_title").innerHTML = "Trip to Secretary";
   document.getElementById("destination_image").src = "img/Student_Secretariat.jpg";
-} else if (x.indexOf("aula-magna") > -1) {
-  console.log("aula-magna");
+} else if (room == "aulamagna") {
+  console.log("aulamagna");
   document.getElementById("trip_title").innerHTML = "Trip to Aula Magna";
   document.getElementById("destination_image").src = "img/aula_magna.jpg";
-} else if (x.indexOf("library") > -1) {
+} else if (room == "library") {
   console.log("library");
   document.getElementById("trip_title").innerHTML = "Trip to Library";
   document.getElementById("destination_image").src = "img/library.jpg";
-} else if (x.indexOf("elevator-e") > -1) {
-  console.log("elevator-e");
+} else if (room == "elevatore") {
+  console.log("elevatore");
   document.getElementById("trip_title").innerHTML = "Trip to elevator E building<br>(ground floor)";
   document.getElementById("destination_image").src = "img/e.jpg";
-} else if (x.indexOf("relax-area-e") > -1) {
-  console.log("relax-area-e");
+} else if (room == "relaxareae") {
+  console.log("relaxareae");
   document.getElementById("trip_title").innerHTML = "Trip to relax area E building";
   document.getElementById("destination_image").src = "img/e.jpg";
 }   
-    console.log();
+    
     $( "#pause_button" ).click(function() {
       //console.log("button clicked");
     var value = document.getElementById("pause_button").innerHTML;
